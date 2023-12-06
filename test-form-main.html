@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+        <link rel="stylesheet" href="main.css">
+        <title>Black Jack</title>
+    </head>
+    <body>
+      <section>
+        <form id="form">
+            <label for='bet'><h4>bet amount?</h4></label>
+            <input id='bet' name='bet' onmousemove="betVal()" type="range" min="20" max="1000" step="10"> 
+            <input id="submitForm" onclick="removeClassHide('mainGame')" type="submit" value="submit">
+            <h2 id="betVal"></h2>
+        </form>
+        <div id="money"></div>
+      </section>
+
+      <section id="mainGame" class="hide">
+        <h2><strong>Draw a card</strong></h2>
+        <br>
+        <button id="cardsPile" name="cardsPile"><img height="200px" width="120px" src="https://opengameart.org/sites/default/files/card%20back%20black.png"> </button>
+        <h1><div id="dealerCards"></div></h1>
+        <h2> total points:</h2>
+       <h3 id="result" name="result"></h3>
+        <br>
+        <h2 id="title2" class="hide">hand 2 total points:</h2>
+        <h3 id="result2" name="result2"></h3>
+        <h1><div id="yourCards"></div></h1>
+        <br>
+        <h3 id="Dresult"></h3>
+        <br>
+        <h1><div id="yourCards2"></div></h1>
+        <button id="stand" onclick=" dealerMove()">stand</button>
+        <button id="hit">hit</button>
+        <button id="double">Double</button>
+        <button id="split" class="hide">split deck</button>
+        <button id="cardsPile2" name="cardsPile2" class="hide">Draw a card for 2 hand</button>
+      </section>
+
+      <section id="toHide" class="hide">
+        <h1>please hide me</h1>
+      </section>
+        <script src="test-form.js"></script>
+    </body>
+</html>
